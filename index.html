@@ -1,93 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Arvind Kumar | Mobile Developer</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #0f172a;
-            color: white;
-            text-align: center;
-        }
-        header {
-            padding: 60px 20px;
-        }
-        h1 {
-            font-size: 42px;
-            margin-bottom: 10px;
-        }
-        h2 {
-            color: #22c55e;
-            margin-top: 0;
-        }
-        section {
-            padding: 40px 20px;
-        }
-        .card {
-            background: #1e293b;
-            margin: 15px auto;
-            padding: 20px;
-            border-radius: 10px;
-            max-width: 600px;
-        }
-        a {
-            color: #22c55e;
-            text-decoration: none;
-        }
-        footer {
-            padding: 20px;
-            font-size: 14px;
-            opacity: 0.7;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arvind Kumar | Mobile Developer</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+
+:root {
+    --primary: #22c55e;
+    --bg: #0f172a;
+    --card: #1e293b;
+    --text: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    scroll-behavior: smooth;
+}
+
+section {
+    padding: 80px 10%;
+}
+
+h1, h2, h3 {
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    color: var(--primary);
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: var(--primary);
+    color: #000;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.card {
+    background: var(--card);
+    padding: 25px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.grid {
+    display: grid;
+    gap: 25px;
+}
+
+.grid-3 {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.progress {
+    background: #334155;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.progress-bar {
+    height: 10px;
+    background: var(--primary);
+    width: 0;
+    transition: width 1.5s ease;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #0b1220;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 1s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive */
+@media(max-width:768px){
+    h1 { font-size: 32px; }
+    section { padding: 60px 5%; }
+}
+
+</style>
 </head>
+
 <body>
 
-<header>
+<!-- HERO -->
+<section class="fade-in">
     <h1>Arvind Kumar</h1>
-    <h2>Android & iOS Developer</h2>
-    <p>6.7+ Years of Experience in Mobile Application Development</p>
-</header>
+    <h3>Android & iOS Developer | 6.7+ Years Experience</h3>
+    <br>
+    <a href="resume.pdf" class="btn" download>Download Resume</a>
+</section>
 
-<section>
-    <h2>Tech Stack</h2>
+<!-- ABOUT -->
+<section class="fade-in">
+    <h2>About Me</h2>
     <div class="card">
-        Android • Kotlin • Java • Jetpack Compose • MVVM • Clean Architecture
-        <br><br>
-        iOS • Swift • UIKit • SwiftUI
-        <br><br>
-        Firebase • REST APIs • Git • CI/CD
+        Passionate Mobile Developer with 6.7+ years of experience building scalable Android and iOS applications.
+        Strong expertise in MVVM, Clean Architecture, Kotlin, Swift, and performance optimization.
     </div>
 </section>
 
-<section>
-    <h2>Projects</h2>
-    <div class="card">
-        <h3>Video Listing App</h3>
-        <p>MVVM + Clean Architecture with Coroutines, Flow, Room DB.</p>
-    </div>
+<!-- SKILLS -->
+<section class="fade-in">
+    <h2>Skills</h2>
 
-    <div class="card">
-        <h3>Enterprise Android Applications</h3>
-        <p>Worked on scalable apps with performance optimization.</p>
+    <p>Android / Kotlin</p>
+    <div class="progress"><div class="progress-bar" style="width:90%"></div></div>
+
+    <p>Jetpack Compose</p>
+    <div class="progress"><div class="progress-bar" style="width:85%"></div></div>
+
+    <p>MVVM / Clean Architecture</p>
+    <div class="progress"><div class="progress-bar" style="width:88%"></div></div>
+
+    <p>iOS / Swift</p>
+    <div class="progress"><div class="progress-bar" style="width:80%"></div></div>
+
+    <p>Firebase / APIs</p>
+    <div class="progress"><div class="progress-bar" style="width:85%"></div></div>
+
+</section>
+
+<!-- PROJECTS -->
+<section class="fade-in">
+    <h2>Live Projects</h2>
+
+    <div class="grid grid-3">
+
+        <div class="card">
+            <h3>EaseMyTrip</h3>
+            <a href="https://play.google.com/store/apps/details?id=com.easemytrip.android" target="_blank">View on Play Store</a>
+        </div>
+
+        <div class="card">
+            <h3>Fision (Hotwire)</h3>
+            <a href="https://play.google.com/store/apps/details?id=com.hotwirecommunications.fision" target="_blank">View on Play Store</a>
+        </div>
+
+        <div class="card">
+            <h3>Flipspot</h3>
+            <a href="https://play.google.com/store/apps/details?id=com.flipspot" target="_blank">View on Play Store</a>
+        </div>
+
+        <div class="card">
+            <h3>Royal Botanica</h3>
+            <a href="https://play.google.com/store/apps/details?id=royalbotanica.in" target="_blank">View on Play Store</a>
+        </div>
+
+        <div class="card">
+            <h3>Just Opal</h3>
+            <a href="https://play.google.com/store/apps/details?id=justopal.com.au" target="_blank">View on Play Store</a>
+        </div>
+
+        <div class="card">
+            <h3>The Thirty Three</h3>
+            <a href="https://play.google.com/store/apps/details?id=thethirtythree.in" target="_blank">View on Play Store</a>
+        </div>
+
     </div>
 </section>
 
-<section>
+<!-- CONTACT -->
+<section class="fade-in">
     <h2>Contact</h2>
     <div class="card">
         📧 your-email@gmail.com <br><br>
-        🔗 <a href="https://linkedin.com/in/yourprofile">LinkedIn</a> <br>
-        🔗 <a href="https://github.com/yourusername">GitHub</a>
+        🔗 <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a><br>
+        🔗 <a href="https://github.com/yourusername" target="_blank">GitHub</a>
     </div>
 </section>
 
 <footer>
-    © 2026 Arvind Kumar | Mobile Developer
+    © 2026 Arvind Kumar | Built with ❤️
 </footer>
+
+<script>
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+        }
+    });
+});
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
